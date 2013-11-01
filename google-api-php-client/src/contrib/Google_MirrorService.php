@@ -561,6 +561,7 @@ class Google_Contact extends Google_Model {
   public $source;
   public $speakableName;
   public $type;
+  public $sharingFeatures;
   public function setAcceptCommands(/* array(Google_Command) */ $acceptCommands) {
     $this->assertIsArray($acceptCommands, 'Google_Command', __METHOD__);
     $this->acceptCommands = $acceptCommands;
@@ -629,6 +630,13 @@ class Google_Contact extends Google_Model {
   }
   public function getType() {
     return $this->type;
+  }
+  public function setSharingFeatures(/* array(google_string) */ $sharingFeatures) {
+    $this->assertIsArray($sharingFeatures, 'google_string', __METHOD__);
+    $this->sharingFeatures = $sharingFeatures;
+  }
+  public function getSharingFeatures() {
+    return $this->sharingFeatures;
   }
 }
 
